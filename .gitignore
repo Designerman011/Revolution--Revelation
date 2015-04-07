@@ -45,7 +45,7 @@ Temporary Items
 $ cat .gitignore
 /*
 !build.gradle
-!/src.*
+!/src
 !*.project
 !/gradle
 !gradlew
