@@ -18,7 +18,7 @@ public class GuibasicGrinder extends GuiContainer{
 	private final InventoryPlayer inventoryPlayer;
 	private final IInventory tilebasicGrinder;
 	
-	public GuibasicGrinder(InventoryPlayer invPlayer, TileEntitybasicGrinder tile) {
+	public GuibasicGrinder(InventoryPlayer invPlayer, IInventory tile) {
 		super(new ContainerbasicGrinder(invPlayer, tile));
 		inventoryPlayer = invPlayer;
 		this.tilebasicGrinder = tile;

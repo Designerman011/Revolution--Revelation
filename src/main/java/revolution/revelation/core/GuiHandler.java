@@ -36,7 +36,7 @@ public class GuiHandler implements IGuiHandler{
 		{
 			if (ID == RevelationMod.GUI_ENUM.BASICGRINDER.ordinal())
 			{
-				return new ContainerbasicGrinder(player.inventory, (IInventory)tileEntity);
+				return new GuibasicGrinder(player.inventory, (IInventory)tileEntity);
 			}
 		}
 		return null;
