@@ -61,7 +61,7 @@ public class FoundationItems {
 	//Creative Tools
 	public static Item silversSword;
 	
-	//Tool Materials
+	//Tool Materials (Name, Mining Level, Durability, Mining efficiency, Weapon Damage + 4, Enchantibility)
 	public static final Item.ToolMaterial creativeToolMaterial = EnumHelper.addToolMaterial("creativeToolMaterial", 100, 999999999, 500.0F, 50000.0F, 8000);
 
 	public static void init()

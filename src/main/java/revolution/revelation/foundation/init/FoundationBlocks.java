@@ -23,6 +23,7 @@ public class FoundationBlocks {
 	private static final Block.SoundType soundTypeCloth = new Block.SoundType("cloth", 1.0F, 1.0F);
     private static final Block.SoundType soundTypeMetal = new Block.SoundType("stone", 1.0F, 1.5F);
 	
+    //Instantiation of Blocks
 	//Ores
     public static Block oreAluminum; //ND TC
 	public static Block oreCopper; //ND TC
@@ -37,6 +38,7 @@ public class FoundationBlocks {
 	
 	public static void init()
 	{
+		//Initializes Blocks into game
 		//Ores
 		oreAluminum = new oreAluminum(Material.rock).setUnlocalizedName("oreAluminum").setStepSound(soundTypeStone);
 		oreCopper = new oreCopper(Material.rock).setUnlocalizedName("oreCopper").setStepSound(soundTypeStone);
@@ -52,6 +54,7 @@ public class FoundationBlocks {
 	
 	public static void register()
 	{
+		//Registers Block with unlocalized name
 		//Ores
 		GameRegistry.registerBlock(oreAluminum, oreAluminum.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(oreCopper, oreCopper.getUnlocalizedName().substring(5));

@@ -31,30 +31,21 @@ public class RevelationMod {
 
 	@Instance(Reference.MOD_ID)
 	public static RevelationMod instance;
-	public static void addMapping(Class cl, String id)
-	  	{
-	        if (nameToClassMap.containsKey(id))
-	        {
-	            throw new IllegalArgumentException("Duplicate id: " + id);
-	        }
-	        else
-	        {
-	            nameToClassMap.put(id, cl);
-	            classToNameMap.put(cl, id);
-	        }
-	    }
 	  
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		//Register Tile Entity
 		TileEntity.addMapping(TileEntitybasicGrinder.class, "basicGrinder");
+		//Register Blocks and Items
 		FoundationBlocks.init();
 		FoundationBlocks.register();
 		FoundationItems.init();
 		FoundationItems.register();
 		MachineBlocks.init();
 		MachineBlocks.register();
+		//Register World Generator
 		RevelationWorldGenerator.MainRegistry();
 	}
 	

@@ -15,6 +15,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class locationMarker extends Item
 {
+	//WIP
+	
+	//When Right Clicked, adds NBT storing location clicked at and changes Name to aqua color
 	@Override
 	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)
     {
@@ -35,6 +38,7 @@ public class locationMarker extends Item
         return false;
     }
 	
+	//Clears NBT on Sneak Click
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World worldIn, EntityPlayer playerIn)
     {
@@ -49,6 +53,7 @@ public class locationMarker extends Item
         return stack;
     }
 	
+	//Adds tooltip displaying stored coord data
 	@Override
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced) 
@@ -67,6 +72,7 @@ public class locationMarker extends Item
 		}
 	}
 
+	//Makes item have enchanted effect when NBT data is stored in it
 	@Override
 	@SideOnly(Side.CLIENT)
     public boolean hasEffect(ItemStack stack)
