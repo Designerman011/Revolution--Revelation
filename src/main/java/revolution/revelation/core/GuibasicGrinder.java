@@ -38,7 +38,7 @@ public class GuibasicGrinder extends GuiContainer{
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		mc.getTextureManager().bindTexture(grinderGuiTextures);
 		int marginHorizontal = (width - xSize) / 2;
-		int marginVertical = (height = ySize) / 2;
+		int marginVertical = (height - ySize) / 2;
 		drawTexturedModalRect(marginHorizontal, marginVertical, 0, 0, xSize, ySize);
 		
 		int progressLevel = getProgressLevel(24);
@@ -51,5 +51,6 @@ public class GuibasicGrinder extends GuiContainer{
 		int ticksPerItem = tilebasicGrinder.getField(3);
 		return ticksPerItem != 0 && ticksGrindingItemSoFar != 0 ? ticksGrindingItemSoFar * progressIndicatorPixelWidth / ticksPerItem : 0;
 	}
+	
 
 }
